@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+    -webkit-user-select: none;
+    
+}
+
+body {
+    background-color: #1b263b;
+    font-family: "Caacupe One", sans-serif;
+    color: #e0e1dd;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

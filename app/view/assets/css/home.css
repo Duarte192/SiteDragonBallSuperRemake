@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Caacupe+One&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+body {
+    background: linear-gradient(to top, #5c6e8b 0%, #112a58 100%);
+    font-family: "Caacupe One", sans-serif;
+    color: #e0e1dd;
+    min-height: 100vh;
+}
+
+#Title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15vh;
+    font-size: 35px;
+    letter-spacing: 3px;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+    background: linear-gradient(to top, #444e63, #2e3e5c);
+    border-bottom: 2px solid #ac5422;
+    position: relative;
+    isolation: isolate;
+}
+
+#Title::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, #444e63, #2e3e5c);
+    filter: brightness(0.65) saturate(0.7);
+    z-index: -1;
+}
+.goku {
+    position: relative;
+    min-height: 85vh;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background: linear-gradient(135deg, #161f30 0%, #1b263b 100%);
+    
+}
+
+.goku .gif {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    opacity: 0.30;
+    filter: brightness(0.65) saturate(0.7);
+    z-index: 0;
+    pointer-events: none;
+}
+
+.goku::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg,
+            rgba(22, 31, 48, 0.55),
+            rgba(27, 38, 59, 0.35),
+            rgba(22, 31, 48, 0.75));
+    z-index: 1;
+    pointer-events: none;
+}
+
+.goku-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 35px;
+    width: 100%;
+    padding-top: 30px;
+}
+
+#SubTitle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    justify-content: center;
+    height: auto;
+    padding: 20px;
+    text-align: center;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+#SubTitle h2 {
+    color: #e7e9eb;
+    font-size: 36px;
+}
+
+#SubTitle p {
+    font-size: 16px;
+    color: #9aaec5;
+    max-width: 500px;
+}
+
+#Button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+}
+
+button {
+    color: #e0e1dd;
+    background: linear-gradient(135deg, #415a77 0%, #778da9 100%);
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 50px;
+    padding: 12px 32px;
+    border: none;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    letter-spacing: 1px;
+    font-family: "Caacupe One", sans-serif;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(65, 90, 119, 0.5);
+    background: linear-gradient(135deg, #778da9 0%, #415a77 100%);
+}
+
+button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+#transicaoVideo {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    z-index: 9999;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+#transicaoVideo.ativo {
+    display: flex;
+}
+
+#transicaoVideo video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    #Title {
+        font-size: 22px;
+        height: 12vh;
+        text-align: center;
+    }
+
+    .goku {
+        min-height: 88vh;
+    }
+
+    .goku .video {
+        object-fit: cover;
+    }
+
+    #SubTitle h2 {
+        font-size: 27px;
+    }
+
+    #SubTitle p {
+        font-size: 14px;
+    }
+
+    button {
+        font-size: 18px;
+    }
+}
+#video-transition {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    z-index: 99999;
+    display: none;
+}
+
+#video-transition video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

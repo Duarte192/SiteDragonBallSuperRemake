@@ -1,0 +1,45 @@
+#notificacoes {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 9999;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    width: min(360px, calc(100% - 40px));
+}
+
+.notificacao {
+    padding: 16px;
+    border-radius: 8px;
+    background: #1e293b;
+    color: white;
+    box-shadow: 0 4px 15px #0003;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.notificacao.sucesso {
+    background: #166534;
+}
+
+.notificacao.erro {
+    background: #991b1b;
+}
+
+.notificacao.aviso {
+    background: #854d0e;
+}
+
+.notificacao button {
+    border: none;
+    background: transparent;
+    color: inherit;
+    font-size: 24px;
+    cursor: pointer;
+}
